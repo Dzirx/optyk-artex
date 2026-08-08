@@ -1,0 +1,69 @@
+PROMPTY DO WYGENEROWANIA ZDJĘĆ — ARTEX Zakład Optyczny
+========================================================
+
+Styl przewodni (stosować we wszystkich promptach):
+- Kolorystyka marki: głęboka zieleń (#294f3d) + kremowa biel (#f6f1e7), drewniane akcenty.
+- Klimat: ciepły, lokalny, rodzinny, ale elegancki i profesjonalny (nie sterylna klinika, nie tania stockowa fotka).
+- Naturalne / miękkie punktowe światło, styl edytorialny/lifestyle, wysoka jakość, realistyczne.
+- Unikać: widocznych logotypów innych marek, widocznych twarzy realnych osób, angielskich napisów w kadrze, sztucznego/plastikowego wyglądu "stockowego".
+
+Po wygenerowaniu zapisz pliki w folderze img/ pod podanymi niżej nazwami — dzięki temu łatwo je będzie podpiąć w kodzie (tak jak zrobiliśmy z img/transition.png).
+
+--------------------------------------------------------
+1) HERO — strona główna (index.html, sekcja górna)
+Plik docelowy: img/hero-salon.jpg
+Proporcje: poziomo, ok. 6:5 (np. 1200x1000 px)
+Prompt:
+"Wnętrze eleganckiego, nowoczesnego salonu optycznego w ciepłych, stonowanych barwach – głęboka butelkowa zieleń i kremowa biel, drewniane akcenty, delikatne punktowe oświetlenie. Na pierwszym planie regały z oprawkami okularowymi ułożonymi estetycznie, w tle duże lustro i wygodna sofa w stylu butikowym. Zdjęcie w stylu edytorialnym/lifestyle, naturalne światło dzienne wpadające przez okno, ostry pierwszy plan, delikatna głębia ostrości w tle. Bez ludzi w kadrze."
+
+--------------------------------------------------------
+2) SEKCJA "BADANIE WZROKU" (index.html)
+Plik docelowy: img/badanie-wzroku.jpg
+Proporcje: poziomo, ok. 6:5 (np. 1200x1000 px)
+Prompt:
+"Gabinet badania wzroku w salonie optycznym – nowoczesny autorefraktometr/fotopter na pierwszym planie, w tle wygodny fotel dla pacjenta i tablica do testu ostrości wzroku. Ciepłe, przyjazne oświetlenie, stonowana kolorystyka: zieleń, beż, drewno. Klimat spokojny i profesjonalny, bez ludzi w kadrze lub z delikatnie rozmytą sylwetką w tle. Zdjęcie realistyczne, wysoka jakość, naturalne światło."
+
+--------------------------------------------------------
+3) SEKCJA "DLACZEGO ARTEX" (index.html)
+Plik docelowy: img/oprawy-ekspozycja.jpg
+Proporcje: poziomo, ok. 6:5 (np. 1200x1000 px)
+Prompt:
+"Zbliżenie na elegancką ekspozycję opraw okularowych w salonie optycznym – oprawki ułożone rzędami na podświetlanych półkach, ciepłe punktowe światło podkreślające detale opraw, tło w stonowanej zieleni i drewnie. Styl butikowy, premium, ostrość na pierwszym planie opraw, lekkie rozmycie tła."
+
+--------------------------------------------------------
+4) HERO — strona Moda (moda.html)
+Plik docelowy: img/moda-ekspozycja.jpg
+Proporcje: poziomo, ok. 6:5 (np. 1200x1000 px)
+Prompt:
+"Elegancka witryna z markowymi oprawkami okularowymi w stylu wysokiej mody – oprawki ustawione na eleganckich podstawkach, delikatne dramatyczne oświetlenie, ciemnozielone i złote akcenty, atmosfera butiku z okularami projektantów. Zdjęcie edytorialne, wysoka jakość, wyraźna głębia ostrości."
+
+--------------------------------------------------------
+5) KARTA MARKI — Eva Minge (moda.html)
+Plik docelowy: img/marka-eva-minge.jpg
+Proporcje: poziomo 3:2 (np. 1200x800 px)
+Prompt:
+"Stylowe, kobiece oprawki okularowe w klasycznym, eleganckim wzornictwie, subtelne złote wykończenia, delikatne stonowane kolory. Zdjęcie produktowe na jasnym, neutralnym tle z miękkim cieniem, klimat luksusowej, kobiecej mody projektanckiej."
+
+--------------------------------------------------------
+6) KARTA MARKI — Giorgio Armani (moda.html)
+Plik docelowy: img/marka-armani.jpg
+Proporcje: poziomo 3:2 (np. 1200x800 px)
+Prompt:
+"Klasyczne, minimalistyczne oprawki okularowe w czerni i stonowanych odcieniach szarości, precyzyjne wykończenie metalowych elementów. Zdjęcie produktowe w stylu eleganckiego włoskiego domu mody – stonowane tło, miękkie studyjne oświetlenie."
+
+--------------------------------------------------------
+7) KARTA MARKI — Vogue Eyewear (moda.html)
+Plik docelowy: img/marka-vogue.jpg
+Proporcje: poziomo 3:2 (np. 1200x800 px)
+Prompt:
+"Modne, kolorowe oprawki okularowe w stylu młodzieżowym/trendy, żywe kolory (np. bursztynowy, różowy, przezroczysty acetat). Zdjęcie produktowe na jasnym tle, dynamiczna, nowoczesna kompozycja, dobre studyjne oświetlenie."
+
+--------------------------------------------------------
+8) DRUGA SEKCJA — strona Moda, "Styl i komfort" (moda.html)
+Plik docelowy: img/moda-styl.jpg
+Proporcje: poziomo, ok. 6:5 (np. 1200x1000 px)
+Prompt:
+"Zbliżenie na dłoń przymierzającą eleganckie oprawki okularowe przed lustrem w butikowym salonie optycznym, ciepłe światło, zielono-kremowa kolorystyka wnętrza, klimat osobistej stylizacji i doradztwa. Bez widocznej twarzy."
+
+--------------------------------------------------------
+Po wygenerowaniu i zapisaniu plików w img/ — daj znać, a podmienię placeholdery w kodzie (index.html i moda.html) na docelowe zdjęcia, tak jak zrobiliśmy to z img/transition.png na stronie Soczewki.
