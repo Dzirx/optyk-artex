@@ -19,6 +19,29 @@ if (menuToggle && navLinks) {
   });
 }
 
+document.querySelectorAll('.cards').forEach(function(el){
+  var isDown = false, startX, scrollLeft;
+  el.addEventListener('mousedown', function(e){
+    isDown = true;
+    el.classList.add('dragging');
+    startX = e.pageX - el.offsetLeft;
+    scrollLeft = el.scrollLeft;
+  });
+  ['mouseleave', 'mouseup'].forEach(function(evt){
+    el.addEventListener(evt, function(){
+      isDown = false;
+      el.classList.remove('dragging');
+    });
+  });
+  el.addEventListener('mousemove', function(e){
+    if (!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - el.offsetLeft;
+    var walk = x - startX;
+    el.scrollLeft = scrollLeft - walk;
+  });
+});
+
 (function cookieNotice(){
   var STORAGE_KEY = 'artex_cookie_notice_seen';
   var seen = null;

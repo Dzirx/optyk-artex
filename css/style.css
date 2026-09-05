@@ -34,7 +34,10 @@ section{padding:88px 0}
 .section-head{max-width:720px;margin-bottom:38px}
 .section-head h2{font:700 clamp(34px,4vw,52px)/1.1 var(--display);margin:10px 0}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.cards{display:flex;gap:18px;overflow-x:auto;cursor:grab;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cards.dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.cards .card{flex:0 0 260px;scroll-snap-align:start}
+.cards::-webkit-scrollbar{display:none}
 .card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 24px rgba(30,42,36,.06);transition:transform .25s ease,box-shadow .25s ease}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(30,42,36,.14)}
 .card .icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--g);font-size:22px}
@@ -128,7 +131,7 @@ section{padding:88px 0}
   .links a{padding:14px 24px}
   .menu-toggle{display:flex}
   .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr 1fr}
+  .cards .card{flex-basis:70%}
   .range,.reviews,.brands{grid-template-columns:1fr}
   .placeholder{min-height:320px}
   .legal-name{max-width:150px}
@@ -136,7 +139,7 @@ section{padding:88px 0}
   .hero{padding-top:48px}
 }
 @media(max-width:560px){
-  .cards{grid-template-columns:1fr}
+  .cards .card{flex-basis:82%}
   .hero h1{font-size:46px}
 }
 @media(max-width:400px){
