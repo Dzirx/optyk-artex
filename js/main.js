@@ -1,6 +1,7 @@
 document.querySelectorAll('.faq-q').forEach(function(b){
   b.addEventListener('click', function(){
-    b.parentElement.classList.toggle('open');
+    var otwarte = b.parentElement.classList.toggle('open');
+    b.setAttribute('aria-expanded', otwarte ? 'true' : 'false');
   });
 });
 
@@ -53,7 +54,7 @@ document.querySelectorAll('.cards').forEach(function(el){
   banner.id = 'cookieBanner';
   banner.innerHTML =
     '<div class="wrap cookie-banner-inner">' +
-      '<p>Ta strona wykorzystuje pliki cookies, aby zapewnić jak najlepsze działanie serwisu. Dalsze korzystanie ze strony oznacza zgodę na ich użycie. Szczegóły znajdziesz w <a href="polityka-cookies.html">Polityce cookies</a>.</p>' +
+      '<p>Ta strona wykorzystuje pliki cookies, aby zapewnić jak najlepsze działanie serwisu. Dalsze korzystanie ze strony oznacza zgodę na ich użycie. Szczegóły znajdziesz w <a href="/polityka-cookies">Polityce cookies</a>.</p>' +
       '<div class="cookie-banner-actions">' +
         '<button type="button" class="btn alt" id="cookieDecline">Odrzuć</button>' +
         '<button type="button" class="btn" id="cookieAccept">Akceptuję</button>' +

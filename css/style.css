@@ -1,3 +1,11 @@
+/* Fonty hostowane lokalnie (SIL Open Font License).
+   Obciete do znakow lacinskich i polskich; Inter jako font zmienny. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('../fonts/inter-var-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('../fonts/inter-var-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/fraunces-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/fraunces-700-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/caveat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/caveat-600-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
 :root{--g:#294f3d;--g2:#3f6d55;--accent:#a8562e;--cream:#f6f1e7;--ink:#1e2a24;--line:#d9ded8;--white:#fff;--display:"Fraunces","Georgia",serif;--hand:"Caveat","Segoe Script",cursive}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -69,7 +77,7 @@ section{padding:88px 0}
 .brand-card .placeholder{min-height:240px;border-radius:0;border:0}
 .logo-tile{min-height:240px;display:flex;align-items:center;justify-content:center;background:#111}
 .logo-tile.light{background:#fff}
-.logo-tile img{max-width:60%;max-height:60%;object-fit:contain}
+.logo-tile img{width:auto;height:auto;max-width:60%;max-height:144px;object-fit:contain}
 .brand-info{padding:22px}
 
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -93,15 +101,22 @@ section{padding:88px 0}
 .map-fallback p{margin:0;max-width:320px;font-size:14px;color:#cfe1d6}
 .hours{list-style:none;padding:0;margin:14px 0 0}
 .hours li{display:flex;justify-content:space-between;gap:16px;max-width:340px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15)}
-.todo{background:#ffe58a;color:#5b4500;padding:2px 7px;border-radius:5px;font-weight:700;font-size:13px}
-.proposal{background:#cfe8da;color:#1e2a24;padding:2px 7px;border-radius:5px;font-weight:700;font-size:13px}
-.proposal-note{font-size:13px;color:#cfe1d6;margin:6px 0 0}
 
 .footer{background:#163126;color:#dbe7df;padding:20px 0;font-size:13px}
 .footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px 24px;flex-wrap:wrap}
 .footer b{font-size:13px;font-weight:700}
 .footer-links{display:flex;gap:16px}
 .footer-links a:hover{text-decoration:underline}
+
+.notfound{max-width:720px;padding:20px 0 10px}
+.notfound h1{font:700 clamp(38px,5vw,64px)/1.05 var(--display);margin:14px 0 20px}
+.notfound p{font-size:18px}
+.range article h3 a{color:var(--g);text-decoration:underline;text-underline-offset:3px}
+.range article h3 a:hover{color:var(--g2)}
+.notfound-kontakt{margin-top:40px;padding:26px 28px;border-radius:20px;background:var(--cream);font-size:15px}
+.notfound-kontakt p{margin:0 0 10px}
+.notfound-kontakt p:last-child{margin-bottom:0}
+.notfound-kontakt a{color:var(--g);font-weight:700;text-decoration:underline}
 
 .legal{max-width:760px;margin:0 auto}
 .legal h2{font:700 26px/1.3 var(--display);margin:40px 0 14px}
@@ -111,8 +126,6 @@ section{padding:88px 0}
 .legal ul{margin:0 0 14px;padding-left:20px}
 .legal li{margin-bottom:6px}
 .legal .updated{color:#8a948d;font-size:14px;margin-bottom:30px}
-.legal-disclaimer{background:#fff4cf;border:1px solid #e8d38a;border-radius:14px;padding:18px 20px;margin-bottom:36px;font-size:14px;color:#5b4500}
-.legal-disclaimer b{display:block;margin-bottom:4px}
 
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);color:#fff;box-shadow:0 -4px 24px rgba(0,0,0,.15)}
 .cookie-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:18px 0}
@@ -124,6 +137,8 @@ section{padding:88px 0}
 @media(max-width:1100px){
   .range{grid-template-columns:repeat(2,1fr)}
   .brands{grid-template-columns:1fr 1fr}
+  .links{gap:15px;font-size:13px}
+  .links a{white-space:nowrap}
 }
 @media(max-width:850px){
   .links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid #eee;display:none}
