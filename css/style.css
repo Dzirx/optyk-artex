@@ -34,7 +34,6 @@ a{text-decoration:none;color:inherit}
 .hero h1{font:700 clamp(44px,6vw,78px)/1.02 var(--display);margin:14px 0 24px}
 .hero p{font-size:19px;max-width:630px}
 .actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-.placeholder{min-height:460px;border:1px dashed #8fa697;background:repeating-linear-gradient(45deg,#eef2ed,#eef2ed 12px,#f7f9f6 12px,#f7f9f6 24px);display:grid;place-items:center;border-radius:28px;color:var(--g);text-align:center;font-weight:700}
 .photo{border-radius:28px;overflow:hidden;min-height:460px;box-shadow:0 40px 80px -30px rgba(30,42,36,.4)}
 .photo img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover}
 
@@ -76,8 +75,7 @@ section{padding:88px 0}
 .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .brand-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(30,42,36,.06);transition:transform .25s ease,box-shadow .25s ease}
 .brand-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(30,42,36,.14)}
-.brand-card .placeholder{min-height:240px;border-radius:0;border:0}
-.logo-tile{min-height:240px;display:flex;align-items:center;justify-content:center;background:#111}
+.brand-card .logo-tile{min-height:240px;display:flex;align-items:center;justify-content:center;background:#111}
 .logo-tile.light{background:#fff}
 .logo-tile img{width:auto;height:auto;max-width:60%;max-height:144px;object-fit:contain}
 .brand-info{padding:22px}
@@ -96,11 +94,8 @@ section{padding:88px 0}
 
 .contact{background:var(--g);color:white}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
-.contact .placeholder{min-height:320px;background:#244636;border-color:#729080;color:#fff}
-.map-embed{position:relative;min-height:320px;border-radius:28px;overflow:hidden;border:1px solid #729080}
+.contact .map-embed{position:relative;min-height:320px;border-radius:28px;overflow:hidden;border:1px solid #729080}
 .map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:24px;color:#fff}
-.map-fallback p{margin:0;max-width:320px;font-size:14px;color:#cfe1d6}
 .hours{list-style:none;padding:0;margin:14px 0 0}
 .hours li{display:flex;justify-content:space-between;gap:16px;max-width:340px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15)}
 
@@ -150,8 +145,7 @@ section{padding:88px 0}
   .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
   .cards .card{flex-basis:70%}
   .range,.reviews,.brands{grid-template-columns:1fr}
-  .placeholder{min-height:320px}
-  .legal-name{max-width:150px}
+    .legal-name{max-width:150px}
   .nav-actions .btn{padding:11px 16px;font-size:13px}
   .hero{padding-top:48px}
 }
