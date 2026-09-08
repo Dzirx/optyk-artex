@@ -40,6 +40,7 @@ a{text-decoration:none;color:inherit}
 
 section{padding:88px 0}
 .section-head{max-width:720px;margin-bottom:38px}
+.section-head.wide{max-width:880px}
 .section-head h2{font:700 clamp(34px,4vw,52px)/1.1 var(--display);margin:10px 0}
 
 .cards{display:flex;gap:18px;overflow-x:auto;cursor:grab;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -49,6 +50,7 @@ section{padding:88px 0}
 .card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 24px rgba(30,42,36,.06);transition:transform .25s ease,box-shadow .25s ease}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(30,42,36,.14)}
 .card .icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--g);font-size:22px}
+.cards.rowne .card h3{min-height:3.2em;margin-bottom:0}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
 .soft{background:#f7f7f2}
