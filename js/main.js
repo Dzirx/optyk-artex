@@ -20,7 +20,7 @@ if (menuToggle && navLinks) {
   });
 }
 
-document.querySelectorAll('.cards').forEach(function(el){
+document.querySelectorAll('.cards, .reviews').forEach(function(el){
   var isDown = false, startX, scrollLeft;
   el.addEventListener('mousedown', function(e){
     isDown = true;
