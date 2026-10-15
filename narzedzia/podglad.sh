@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Lokalny podglad strony ARTEX.
 # Odwzorowuje zachowanie Vercela: cleanUrls (/moda -> moda.html) i trailingSlash:false.
-# Uzycie:  ./podglad.sh          (port 8000)
-#          ./podglad.sh 9000     (inny port)
+# Uzycie:  ./narzedzia/podglad.sh          (port 8000)
+#          ./narzedzia/podglad.sh 9000     (inny port)
 # Zatrzymanie: Ctrl+C
 
-cd "$(dirname "$0")" || exit 1
+cd "$(dirname "$0")/.." || exit 1
 PORT="${1:-8000}"
 
 python3 - "$PORT" <<'PYTHON'
@@ -60,6 +60,6 @@ except KeyboardInterrupt:
     print("\n  Zatrzymano.\n")
 except OSError as e:
     print(f"\n  Nie mozna uruchomic na porcie {PORT}: {e}")
-    print(f"  Sprobuj innego portu, np.:  ./podglad.sh {PORT + 1}\n")
+    print(f"  Sprobuj innego portu, np.:  ./narzedzia/podglad.sh {PORT + 1}\n")
     sys.exit(1)
 PYTHON

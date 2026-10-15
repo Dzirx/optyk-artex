@@ -109,6 +109,7 @@ section{padding:88px 0}
 .contact-tile .hours li{max-width:none;padding:5px 0}
 .contact-tile .hours li:last-child{border-bottom:0}
 .contact-tile .tile-note{margin-top:10px;font-size:13px;line-height:1.45;color:#cfe1d6}
+.contact-area{margin:22px 0 0;font-size:15px;color:#cfe1d6}
 .contact-call{display:block;margin-top:24px;padding:17px 24px;text-align:center;font-size:18px;background:#fff;color:var(--g)}
 .contact .map-embed{position:relative;min-height:320px;border-radius:28px;overflow:hidden;border:1px solid #729080}
 .map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}

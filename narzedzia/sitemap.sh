@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Generuje sitemap.xml z faktycznych dat modyfikacji plikow.
-# Uruchom po zmianie tresci, PRZED commitem:  ./sitemap.sh
+# Uruchom po zmianie tresci, PRZED commitem:  ./narzedzia/sitemap.sh
 #
 # lastmod bierze date ostatniej zmiany pliku, wiec nie trzeba jej pamietac.
 # Do sitemapy wchodza tylko adresy indeksowalne — 404.html jest pominiety
 # swiadomie, bo ma noindex.
 
-cd "$(dirname "$0")" || exit 1
+cd "$(dirname "$0")/.." || exit 1
 DOMENA="https://optyk-artex.pl"
 
 # plik:adres:priorytet
