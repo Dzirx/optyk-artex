@@ -104,7 +104,7 @@ section{padding:88px 0}
 .contact-tile h3{margin:0 0 10px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#cfe1d6;font-weight:800}
 .contact-tile p{margin:0}
 .contact-tile .tile-doctor{margin:-4px 0 8px;font-weight:700}
-.contact-tile a{color:#fff;text-decoration:underline}
+.contact-tile a{color:#fff;text-decoration:underline;display:inline-block;padding:3px 0}
 .contact-tile .hours{margin:0}
 .contact-tile .hours li{max-width:none;padding:5px 0}
 .contact-tile .hours li:last-child{border-bottom:0}
@@ -161,6 +161,7 @@ section{padding:88px 0}
   .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
   .cards .card{flex-basis:70%}
   .range,.brands{grid-template-columns:1fr}
+  .reviews{align-items:flex-start}
   .reviews .review{flex-basis:70%}
   .logo{height:60px}
   .nav-actions .btn{padding:11px 16px;font-size:13px}
@@ -169,6 +170,7 @@ section{padding:88px 0}
 @media(max-width:560px){
   .cards .card,.reviews .review{flex-basis:82%}
   .contact-tiles{grid-template-columns:1fr}
+  .reviews{padding:8px 12px 32px;margin:-8px -12px -32px;scroll-padding:0 12px}
   .hero h1{font-size:46px}
 }
 @media(max-width:400px){
