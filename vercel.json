@@ -11,23 +11,23 @@
   "rewrites": [
     {
       "source": "/moda",
-      "destination": "/strony/moda.html"
+      "destination": "/strony/moda"
     },
     {
       "source": "/soczewki",
-      "destination": "/strony/soczewki.html"
+      "destination": "/strony/soczewki"
     },
     {
       "source": "/badanie-wzroku",
-      "destination": "/strony/badanie-wzroku.html"
+      "destination": "/strony/badanie-wzroku"
     },
     {
       "source": "/polityka-prywatnosci",
-      "destination": "/strony/polityka-prywatnosci.html"
+      "destination": "/strony/polityka-prywatnosci"
     },
     {
       "source": "/polityka-cookies",
-      "destination": "/strony/polityka-cookies.html"
+      "destination": "/strony/polityka-cookies"
     }
   ],
   "headers": [

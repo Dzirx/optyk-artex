@@ -162,14 +162,17 @@ section{padding:88px 0}
   .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
   .cards .card{flex-basis:70%}
   .range,.brands{grid-template-columns:1fr}
-  .reviews{align-items:flex-start}
+  section{padding:64px 0}
   .reviews .review{flex-basis:70%}
   .logo{height:60px}
   .nav-actions .btn{padding:11px 16px;font-size:13px}
   .hero{padding-top:48px}
 }
 @media(max-width:560px){
+  section{padding:52px 0}
   .cards .card,.reviews .review{flex-basis:82%}
+  .review{padding:22px}
+  .review p{font-size:15px;line-height:1.55}
   .contact-tiles{grid-template-columns:1fr}
   .reviews{padding:8px 12px 32px;margin:-8px -12px -32px;scroll-padding:0 12px}
   .hero h1{font-size:46px}
