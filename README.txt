@@ -29,17 +29,16 @@ w katalogu głównym, bo Vercel serwuje je stamtąd jako /moda, /soczewki itd.
                             ikona Google, obrazek do udostępniania (og-artex.jpg)
   fonts/                    Inter, Fraunces, Caveat hostowane lokalnie
   favicon.png, favicon.ico,
-  apple-touch-icon.png      ikony z emblematu logo (wygenerowane z zrodla/logo.png)
+  apple-touch-icon.png      ikony z emblematu logo
 
   Konfiguracja
   vercel.json               czyste adresy (cleanUrls) + nagłówki cache
   robots.txt, sitemap.xml   dla wyszukiwarek
-  .vercelignore             wyklucza z wdrożenia README, narzedzia/ i zrodla/
+  .vercelignore             wyklucza z wdrożenia README i narzedzia/
 
   Poza wdrożeniem
   narzedzia/podglad.sh      lokalny serwer podglądu
   narzedzia/sitemap.sh      generuje sitemap.xml z dat modyfikacji plików
-  zrodla/                   oryginalne pliki od klienta (logo, zdjęcie salonu)
   README.txt                ten plik
 
 
