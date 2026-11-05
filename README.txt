@@ -2,7 +2,7 @@ ARTEX — strona salonu optycznego
 ================================
 
 F.H.U. „Artex” Zakład Optyczny, Grunwaldzka 2, 33-200 Dąbrowa Tarnowska
-Domena docelowa: optyk-artex.pl
+Domena docelowa: optykartex.pl
 Hosting: Vercel (deploy z repozytorium git)
 
 
@@ -62,7 +62,7 @@ Przed każdym commitem ze zmianą treści:  ./narzedzia/sitemap.sh
 ADRESY
 ------
 Vercel ma włączone cleanUrls i rewrites, więc podstrony działają bez końcówki .html:
-  optyk-artex.pl/moda        (nie /moda.html)
+  optykartex.pl/moda        (nie /moda.html)
 Linki w kodzie muszą być pisane w tej formie — inaczej powstaje zbędne
 przekierowanie przy każdym kliknięciu.
 
@@ -106,7 +106,7 @@ Nie przywracaj ładowania fontów z fonts.googleapis.com bez aktualizacji polity
 DO ZROBIENIA
 ------------
 1. Połączyć gałąź seo-optymalizacja z main, żeby zmiany trafiły na produkcję.
-2. Po podpięciu domeny: przekierowanie www → optyk-artex.pl w panelu Vercel
+2. Po podpięciu domeny: przekierowanie www → optykartex.pl w panelu Vercel
    (nie da się tego ustawić w vercel.json), następnie Google Search Console,
    wysłanie sitemapy i test na pagespeed.web.dev.
 3. Weryfikacja polityk i banera cookies przez prawnika / specjalistę RODO
