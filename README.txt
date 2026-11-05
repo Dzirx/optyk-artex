@@ -9,16 +9,18 @@ Hosting: Vercel (deploy z repozytorium git)
 STRUKTURA
 ---------
 Statyczna strona w czystym HTML/CSS/JS — bez frameworka i bez procesu budowania.
-Pliki idą na serwer takie, jakie są w repozytorium. Strony HTML muszą leżeć
-w katalogu głównym, bo Vercel serwuje je stamtąd jako /moda, /soczewki itd.
+Pliki idą na serwer takie, jakie są w repozytorium. W katalogu głównym leżą tylko
+index.html i 404.html (Vercel podłącza stronę błędu wyłącznie stamtąd). Pozostałe
+strony są w strony/, a vercel.json przepisuje do nich adresy /moda, /soczewki itd.
+Nowa podstrona wymaga wpisu w "rewrites" w vercel.json i w narzedzia/sitemap.sh.
 
   Strony
   index.html                strona główna (optyk, okulista, kontakt)
-  badanie-wzroku.html       gabinet okulistyczny dr n. med. Witolda Tarkowskiego
-  moda.html                 kolekcje modowe (Eva Minge, Armani, Vogue, Ray-Ban)
-  soczewki.html             soczewki fotochromowe Transitions
-  polityka-prywatnosci.html
-  polityka-cookies.html
+  strony/badanie-wzroku.html       gabinet okulistyczny dr n. med. Witolda Tarkowskiego
+  strony/moda.html                 kolekcje modowe (Eva Minge, Armani, Vogue, Ray-Ban)
+  strony/soczewki.html             soczewki fotochromowe Transitions
+  strony/polityka-prywatnosci.html
+  strony/polityka-cookies.html
   404.html                  strona błędu (Vercel podłącza ją automatycznie)
 
   Zasoby strony
@@ -28,18 +30,18 @@ w katalogu głównym, bo Vercel serwuje je stamtąd jako /moda, /soczewki itd.
   img/                      zdjęcia WebP, logo w pasku (logo-artex.webp),
                             ikona Google, obrazek do udostępniania (og-artex.jpg)
   fonts/                    Inter, Fraunces, Caveat hostowane lokalnie
-  favicon.png, favicon.ico,
-  apple-touch-icon.png      ikony z emblematu logo (wygenerowane z zrodla/logo.png)
+  favicons/                 favicon.png, favicon.ico, apple-touch-icon.png
 
   Konfiguracja
-  vercel.json               czyste adresy (cleanUrls) + nagłówki cache
+  vercel.json               czyste adresy (cleanUrls), rewrites do strony/, nagłówki cache
   robots.txt, sitemap.xml   dla wyszukiwarek
-  .vercelignore             wyklucza z wdrożenia README, narzedzia/ i zrodla/
+  llms.txt                  opis strony dla modeli językowych (aktualizować razem z danymi kontaktowymi)
+  .vercelignore             wyklucza z wdrożenia README i narzedzia/
+  .gitignore                narzedzia/ nie trafia do repozytorium
 
-  Poza wdrożeniem
+  Tylko lokalnie (poza gitem i poza wdrożeniem)
   narzedzia/podglad.sh      lokalny serwer podglądu
   narzedzia/sitemap.sh      generuje sitemap.xml z dat modyfikacji plików
-  zrodla/                   oryginalne pliki od klienta (logo, zdjęcie salonu)
   README.txt                ten plik
 
 
@@ -59,7 +61,7 @@ Przed każdym commitem ze zmianą treści:  ./narzedzia/sitemap.sh
 
 ADRESY
 ------
-Vercel ma włączone cleanUrls, więc podstrony działają bez końcówki .html:
+Vercel ma włączone cleanUrls i rewrites, więc podstrony działają bez końcówki .html:
   optyk-artex.pl/moda        (nie /moda.html)
 Linki w kodzie muszą być pisane w tej formie — inaczej powstaje zbędne
 przekierowanie przy każdym kliknięciu.

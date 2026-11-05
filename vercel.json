@@ -1,6 +1,35 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/strony/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/moda",
+      "destination": "/strony/moda.html"
+    },
+    {
+      "source": "/soczewki",
+      "destination": "/strony/soczewki.html"
+    },
+    {
+      "source": "/badanie-wzroku",
+      "destination": "/strony/badanie-wzroku.html"
+    },
+    {
+      "source": "/polityka-prywatnosci",
+      "destination": "/strony/polityka-prywatnosci.html"
+    },
+    {
+      "source": "/polityka-cookies",
+      "destination": "/strony/polityka-cookies.html"
+    }
+  ],
   "headers": [
     {
       "source": "/fonts/(.*)",
@@ -30,7 +59,7 @@
       ]
     },
     {
-      "source": "/(favicon.png|favicon.ico|apple-touch-icon.png)",
+      "source": "/favicons/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
