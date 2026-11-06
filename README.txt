@@ -79,9 +79,9 @@ Opinie:   prawdziwe, pochodzą z wizytówki Google tego zakładu.
           platformy na własną stronę.
 Dane firmowe, godziny, telefony i NIP: prawdziwe.
 
-Polityki prywatności i cookies to szkice wymagające weryfikacji przez prawnika
-lub specjalistę ds. RODO przed publikacją — zwłaszcza gdy na stronie pojawią się
-formularze, analityka lub narzędzia reklamowe.
+Polityki prywatności i cookies są zaakceptowane przez klienta. Przy każdej zmianie
+na stronie, która dodaje formularze, analitykę lub narzędzia reklamowe (np. Google
+Analytics), trzeba je zaktualizować i ponownie zatwierdzić.
 
 
 DANE STRUKTURALNE
@@ -105,15 +105,14 @@ Nie przywracaj ładowania fontów z fonts.googleapis.com bez aktualizacji polity
 
 DO ZROBIENIA
 ------------
-1. Połączyć gałąź seo-optymalizacja z main, żeby zmiany trafiły na produkcję.
-2. Po podpięciu domeny: przekierowanie www → optykartex.pl w panelu Vercel
+1. Po podpięciu domeny: przekierowanie www → optykartex.pl w panelu Vercel
    (nie da się tego ustawić w vercel.json), następnie Google Search Console,
    wysłanie sitemapy i test na pagespeed.web.dev.
-3. Weryfikacja polityk i banera cookies przez prawnika / specjalistę RODO
-   (uwaga: osadzona mapa Google łączy się z serwerami Google).
-4. Do potwierdzenia przez salon / lekarza: sekcja „Jak przygotować się do
+2. Pamiętać, że osadzona mapa Google łączy się z serwerami Google — przy zmianach
+   w politykach i w banerze cookies trzeba to uwzględnić.
+3. Do potwierdzenia przez salon / lekarza: sekcja „Jak przygotować się do
    badania wzroku”, FAQ o soczewkach dla kierowców i Ray-Banach z korekcją,
    lista okolicznych gmin.
-5. Do rozważenia: podstrona „Okulary korekcyjne” pod frazę lokalną.
-6. Do rozważenia: krój Caveat waży 52 kB i obsługuje jeden cytat na dwóch
+4. Do rozważenia: podstrona „Okulary korekcyjne” pod frazę lokalną.
+5. Do rozważenia: krój Caveat waży 52 kB i obsługuje jeden cytat na dwóch
    stronach.
