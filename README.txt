@@ -12,16 +12,16 @@ Statyczna strona w czystym HTML/CSS/JS — bez frameworka i bez procesu budowani
 Pliki idą na serwer takie, jakie są w repozytorium. W katalogu głównym leżą tylko
 index.html i 404.html (Vercel podłącza stronę błędu wyłącznie stamtąd). Pozostałe
 strony są w strony/, a vercel.json przepisuje do nich adresy /moda, /soczewki itd.
-Nowa podstrona wymaga wpisu w "rewrites" w vercel.json i w narzedzia/sitemap.sh.
+Nowa podstrona wymaga wpisu w "rewrites" w vercel.json oraz w sitemap.xml.
 
   Strony
-  index.html                strona główna (optyk, okulista, kontakt)
+  index.html                       strona główna (optyk, okulista, kontakt)
   strony/badanie-wzroku.html       gabinet okulistyczny dr n. med. Witolda Tarkowskiego
   strony/moda.html                 kolekcje modowe (Eva Minge, Armani, Vogue, Ray-Ban)
   strony/soczewki.html             soczewki fotochromowe Transitions
   strony/polityka-prywatnosci.html
   strony/polityka-cookies.html
-  404.html                  strona błędu (Vercel podłącza ją automatycznie)
+  404.html                         strona błędu (Vercel podłącza ją automatycznie)
 
   Zasoby strony
   css/style.css             wszystkie style + deklaracje @font-face
@@ -36,17 +36,22 @@ Nowa podstrona wymaga wpisu w "rewrites" w vercel.json i w narzedzia/sitemap.sh.
   vercel.json               czyste adresy (cleanUrls), rewrites do strony/, nagłówki cache
   robots.txt, sitemap.xml   dla wyszukiwarek
   llms.txt                  opis strony dla modeli językowych (aktualizować razem z danymi kontaktowymi)
-  .vercelignore             wyklucza z wdrożenia README i narzedzia/
+  .vercelignore             wyklucza z wdrożenia README.txt (i narzedzia/)
   .gitignore                narzedzia/ nie trafia do repozytorium
 
-  Tylko lokalnie (poza gitem i poza wdrożeniem)
+  Dokumentacja (w repozytorium, poza wdrożeniem)
+  README.txt                ten plik
+
+  Tylko lokalnie — nie ma ich w repozytorium (katalog narzedzia/ jest w .gitignore)
   narzedzia/podglad.sh      lokalny serwer podglądu
   narzedzia/sitemap.sh      generuje sitemap.xml z dat modyfikacji plików
-  README.txt                ten plik
+  Te skrypty są tylko na komputerze osoby utrzymującej stronę. Po pobraniu
+  repozytorium z GitHuba ich nie będzie.
 
 
 PODGLĄD LOKALNY
 ---------------
+(Dotyczy komputera, na którym jest katalog narzedzia/ — patrz wyżej.)
   ./narzedzia/podglad.sh        uruchamia serwer na porcie 8000 i otwiera przeglądarkę
   ./narzedzia/podglad.sh 9000   inny port
   Ctrl+C                        zatrzymanie
@@ -56,7 +61,8 @@ prowadzą do adresów typu /moda i wymagają serwera. Skrypt odwzorowuje zachowa
 Vercela — czyste adresy, własna strona 404, brak cache — więc widzisz dokładnie
 to, co pojawi się po wdrożeniu.
 
-Przed każdym commitem ze zmianą treści:  ./narzedzia/sitemap.sh
+Przed każdym commitem ze zmianą treści: zaktualizować daty lastmod w sitemap.xml
+(lokalnie robi to ./narzedzia/sitemap.sh; bez skryptu trzeba je poprawić ręcznie).
 
 
 ADRESY
@@ -89,7 +95,8 @@ DANE STRUKTURALNE
 index.html zawiera schema.org: Optician (adres, geo, NIP, trzy telefony, godziny
 salonu, gabinet okulistyczny dr n. med. Witolda Tarkowskiego jako osobny dział,
 katalog usług), WebSite i FAQPage.
-badanie-wzroku.html, moda.html i soczewki.html zawierają BreadcrumbList i FAQPage.
+strony/badanie-wzroku.html, strony/moda.html i strony/soczewki.html zawierają
+BreadcrumbList i FAQPage.
 Odpowiedzi w FAQPage muszą być identyczne z widoczną sekcją FAQ na stronie.
 Po każdej zmianie godzin, telefonów lub adresu trzeba zaktualizować też schemat.
 
