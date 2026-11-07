@@ -12,16 +12,16 @@ Statyczna strona w czystym HTML/CSS/JS — bez frameworka i bez procesu budowani
 Pliki idą na serwer takie, jakie są w repozytorium. W katalogu głównym leżą tylko
 index.html i 404.html (Vercel podłącza stronę błędu wyłącznie stamtąd). Pozostałe
 strony są w strony/, a vercel.json przepisuje do nich adresy /moda, /soczewki itd.
-Nowa podstrona wymaga wpisu w "rewrites" w vercel.json i w narzedzia/sitemap.sh.
+Nowa podstrona wymaga wpisu w "rewrites" w vercel.json oraz w sitemap.xml.
 
   Strony
-  index.html                strona główna (optyk, okulista, kontakt)
+  index.html                       strona główna (optyk, okulista, kontakt)
   strony/badanie-wzroku.html       gabinet okulistyczny dr n. med. Witolda Tarkowskiego
   strony/moda.html                 kolekcje modowe (Eva Minge, Armani, Vogue, Ray-Ban)
   strony/soczewki.html             soczewki fotochromowe Transitions
   strony/polityka-prywatnosci.html
   strony/polityka-cookies.html
-  404.html                  strona błędu (Vercel podłącza ją automatycznie)
+  404.html                         strona błędu (Vercel podłącza ją automatycznie)
 
   Zasoby strony
   css/style.css             wszystkie style + deklaracje @font-face
@@ -36,17 +36,22 @@ Nowa podstrona wymaga wpisu w "rewrites" w vercel.json i w narzedzia/sitemap.sh.
   vercel.json               czyste adresy (cleanUrls), rewrites do strony/, nagłówki cache
   robots.txt, sitemap.xml   dla wyszukiwarek
   llms.txt                  opis strony dla modeli językowych (aktualizować razem z danymi kontaktowymi)
-  .vercelignore             wyklucza z wdrożenia README i narzedzia/
+  .vercelignore             wyklucza z wdrożenia README.txt (i narzedzia/)
   .gitignore                narzedzia/ nie trafia do repozytorium
 
-  Tylko lokalnie (poza gitem i poza wdrożeniem)
+  Dokumentacja (w repozytorium, poza wdrożeniem)
+  README.txt                ten plik
+
+  Tylko lokalnie — nie ma ich w repozytorium (katalog narzedzia/ jest w .gitignore)
   narzedzia/podglad.sh      lokalny serwer podglądu
   narzedzia/sitemap.sh      generuje sitemap.xml z dat modyfikacji plików
-  README.txt                ten plik
+  Te skrypty są tylko na komputerze osoby utrzymującej stronę. Po pobraniu
+  repozytorium z GitHuba ich nie będzie.
 
 
 PODGLĄD LOKALNY
 ---------------
+(Dotyczy komputera, na którym jest katalog narzedzia/ — patrz wyżej.)
   ./narzedzia/podglad.sh        uruchamia serwer na porcie 8000 i otwiera przeglądarkę
   ./narzedzia/podglad.sh 9000   inny port
   Ctrl+C                        zatrzymanie
@@ -56,7 +61,8 @@ prowadzą do adresów typu /moda i wymagają serwera. Skrypt odwzorowuje zachowa
 Vercela — czyste adresy, własna strona 404, brak cache — więc widzisz dokładnie
 to, co pojawi się po wdrożeniu.
 
-Przed każdym commitem ze zmianą treści:  ./narzedzia/sitemap.sh
+Przed każdym commitem ze zmianą treści: zaktualizować daty lastmod w sitemap.xml
+(lokalnie robi to ./narzedzia/sitemap.sh; bez skryptu trzeba je poprawić ręcznie).
 
 
 ADRESY
@@ -79,9 +85,9 @@ Opinie:   prawdziwe, pochodzą z wizytówki Google tego zakładu.
           platformy na własną stronę.
 Dane firmowe, godziny, telefony i NIP: prawdziwe.
 
-Polityki prywatności i cookies to szkice wymagające weryfikacji przez prawnika
-lub specjalistę ds. RODO przed publikacją — zwłaszcza gdy na stronie pojawią się
-formularze, analityka lub narzędzia reklamowe.
+Polityki prywatności i cookies są zaakceptowane przez klienta. Przy każdej zmianie
+na stronie, która dodaje formularze, analitykę lub narzędzia reklamowe (np. Google
+Analytics), trzeba je zaktualizować i ponownie zatwierdzić.
 
 
 DANE STRUKTURALNE
@@ -89,7 +95,8 @@ DANE STRUKTURALNE
 index.html zawiera schema.org: Optician (adres, geo, NIP, trzy telefony, godziny
 salonu, gabinet okulistyczny dr n. med. Witolda Tarkowskiego jako osobny dział,
 katalog usług), WebSite i FAQPage.
-badanie-wzroku.html, moda.html i soczewki.html zawierają BreadcrumbList i FAQPage.
+strony/badanie-wzroku.html, strony/moda.html i strony/soczewki.html zawierają
+BreadcrumbList i FAQPage.
 Odpowiedzi w FAQPage muszą być identyczne z widoczną sekcją FAQ na stronie.
 Po każdej zmianie godzin, telefonów lub adresu trzeba zaktualizować też schemat.
 
@@ -105,15 +112,14 @@ Nie przywracaj ładowania fontów z fonts.googleapis.com bez aktualizacji polity
 
 DO ZROBIENIA
 ------------
-1. Połączyć gałąź seo-optymalizacja z main, żeby zmiany trafiły na produkcję.
-2. Po podpięciu domeny: przekierowanie www → optykartex.pl w panelu Vercel
+1. Po podpięciu domeny: przekierowanie www → optykartex.pl w panelu Vercel
    (nie da się tego ustawić w vercel.json), następnie Google Search Console,
    wysłanie sitemapy i test na pagespeed.web.dev.
-3. Weryfikacja polityk i banera cookies przez prawnika / specjalistę RODO
-   (uwaga: osadzona mapa Google łączy się z serwerami Google).
-4. Do potwierdzenia przez salon / lekarza: sekcja „Jak przygotować się do
+2. Pamiętać, że osadzona mapa Google łączy się z serwerami Google — przy zmianach
+   w politykach i w banerze cookies trzeba to uwzględnić.
+3. Do potwierdzenia przez salon / lekarza: sekcja „Jak przygotować się do
    badania wzroku”, FAQ o soczewkach dla kierowców i Ray-Banach z korekcją,
    lista okolicznych gmin.
-5. Do rozważenia: podstrona „Okulary korekcyjne” pod frazę lokalną.
-6. Do rozważenia: krój Caveat waży 52 kB i obsługuje jeden cytat na dwóch
+4. Do rozważenia: podstrona „Okulary korekcyjne” pod frazę lokalną.
+5. Do rozważenia: krój Caveat waży 52 kB i obsługuje jeden cytat na dwóch
    stronach.
